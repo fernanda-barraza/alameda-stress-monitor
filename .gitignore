@@ -1,0 +1,26 @@
+# Installed dependencies
+node_modules/
+**/node_modules/
+
+# Python virtual environment
+venv/
+.venv/
+
+# Secrets and machine-specific files
+.env
+.env.*
+.DS_Store
+
+# Build output
+dist/
+**/dist/
+
+# Raw geographic / raster source data
+data/raw/
+*.tif
+*.tiff
+
+# Logs
+*.log
+npm-debug.log*
+
