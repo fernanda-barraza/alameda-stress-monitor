@@ -5,9 +5,16 @@ import pool from "./db";
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://fernanda-barraza.github.io",
+    ],
+  })
+);
 
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
 app.get("/api/tracts", async (req, res) => {
     const minScore = req.query.minScore;
