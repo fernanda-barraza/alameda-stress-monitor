@@ -225,6 +225,27 @@ function App() {
         </aside>
       </section>
 
+      <section className="github-section">
+        <div className="github-content">
+          <p className="eyebrow">EXPLORE THE PROJECT</p>
+          <h2>Want to see how it works?</h2>
+          <p>
+            Explore the source code, data processing pipeline, and ongoing
+            development of the Alameda Stress Monitor on GitHub.
+          </p>
+
+          <a
+            href="https://github.com/fernanda-barraza/alameda-stress-monitor"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="github-button"
+          >
+            View on GitHub
+            <span>↗</span>
+          </a>
+        </div>
+      </section>
+
     </main>
   );
 }
