@@ -134,8 +134,6 @@ function App() {
 
     layer.on({
       mouseover: (event) => {
-        // Leaflet can occasionally skip a mouseout when the pointer crosses
-        // adjacent polygons quickly, so always clear the prior hover first.
         const previousHover = hoveredLayerRef.current;
         if (previousHover && previousHover !== event.target && previousHover !== selectedLayerRef.current) {
           previousHover.setStyle(baseStyle);
@@ -176,6 +174,15 @@ function App() {
     setMinScore("");
     fetchTracts();
   };
+
+  if (isLoading) {
+    return (
+      <div className="loading-screen">
+        <div className="spinner"></div>
+        <p>Loading Alameda Stress Monitor...</p>
+      </div>
+    );
+  }
 
   return (
     <main className="app-shell">
